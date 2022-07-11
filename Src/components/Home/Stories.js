@@ -1,6 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import USERS from '../../data/Users';
 
 const Stories = () => {
@@ -17,12 +24,14 @@ const Stories = () => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Image
-              source={{
-                uri: story.image,
-              }}
-              style={styles.story}
-            />
+            <TouchableOpacity>
+              <Image
+                source={{
+                  uri: story.image,
+                }}
+                style={styles.story}
+              />
+            </TouchableOpacity>
             <Text
               style={{
                 color: 'black',

@@ -134,8 +134,7 @@ const PostLikes = ({post}) => (
         color: 'black',
         fontWeight: '600',
       }}>
-      {post.likes.toLocaleString('en')}
-      likes
+      {post.likes.toLocaleString('en') + ' ' + 'likes'}
     </Text>
   </View>
 );
