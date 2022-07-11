@@ -42,15 +42,16 @@ const PostHeader = ({post}) => (
       }}>
       <Image
         source={{
-          uri: post.imageUrl,
+          uri: post.profile_picture,
         }}
         style={styles.story}
       />
       <Text
         style={{
-          color: 'white',
+          color: 'black',
           marginLeft: 5,
           fontWeight: '700',
+          fontSize: 20,
         }}>
         {post.user}
       </Text>
@@ -60,7 +61,7 @@ const PostHeader = ({post}) => (
         style={styles.icon}
         name="ellipsis-horizontal-outline"
         size={20}
-        color="#fff"
+        color="#000"
       />
     </TouchableOpacity>
   </View>
@@ -96,17 +97,17 @@ const PostFooter = ({post}) => (
         justifyContent: 'space-between',
       }}>
       <TouchableOpacity>
-        <Icon name="heart-outline" size={25} color="#fff" />
+        <Icon name="heart-outline" size={25} color="#000" />
       </TouchableOpacity>
       <TouchableOpacity>
-        <Icon name="chatbubble-outline" size={25} color="#fff" />
+        <Icon name="chatbubble-outline" size={25} color="#000" />
       </TouchableOpacity>
       <TouchableOpacity>
         <Icon
           style={styles.shareicon}
           name="send-outline"
           size={25}
-          color="#fff"
+          color="#000"
         />
       </TouchableOpacity>
     </View>
@@ -116,7 +117,7 @@ const PostFooter = ({post}) => (
         alignItems: 'flex-end',
       }}>
       <TouchableOpacity>
-        <Icon name="bookmark-outline" size={25} color="#fff" />
+        <Icon name="bookmark-outline" size={25} color="#000" />
       </TouchableOpacity>
     </View>
   </View>
@@ -129,7 +130,7 @@ const PostLikes = ({post}) => (
     }}>
     <Text
       style={{
-        color: 'white',
+        color: 'black',
         fontWeight: '600',
       }}>
       {post.likes.toLocaleString('en')}
@@ -146,7 +147,7 @@ const PostCaption = ({post}) => (
     }}>
     <Text
       style={{
-        color: 'white',
+        color: 'black',
         flexWrap: 'wrap',
         flex: 1,
       }}>
@@ -186,7 +187,7 @@ const PostComment = ({post}) => (
         }}>
         <Text
           style={{
-            color: 'white',
+            color: 'black',
             flexWrap: 'wrap',
             flex: 1,
           }}>
@@ -205,8 +206,8 @@ const PostComment = ({post}) => (
 
 const styles = StyleSheet.create({
   story: {
-    width: 35,
-    height: 35,
+    width: 70,
+    height: 70,
     marginLeft: 6,
     borderWidth: 1.6,
     borderColor: '#ff8501',

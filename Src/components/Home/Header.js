@@ -8,7 +8,7 @@ const Header = () => {
       <TouchableOpacity>
         <Image
           style={styles.logo}
-          source={require('../../assets/images/Instagram_logo.png')}
+          source={require('../../assets/images/Instagram.png')}
         />
       </TouchableOpacity>
       <View style={styles.iconsContainer}>
@@ -17,7 +17,7 @@ const Header = () => {
             style={styles.icon}
             name="add-circle-outline"
             size={30}
-            color="#fff"
+            color="#000"
           />
         </TouchableOpacity>
         <TouchableOpacity>
@@ -25,7 +25,7 @@ const Header = () => {
             style={styles.icon}
             name="heart-outline"
             size={30}
-            color="#fff"
+            color="#000"
           />
         </TouchableOpacity>
         <TouchableOpacity>
@@ -36,7 +36,7 @@ const Header = () => {
             style={styles.icon}
             name="chatbubble-ellipses-outline"
             size={30}
-            color="#fff"
+            color="#000"
           />
         </TouchableOpacity>
       </View>
@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   logo: {
-    width: 100,
-    height: 80,
+    width: 200,
+    height: 150,
     resizeMode: 'contain',
   },
   icon: {

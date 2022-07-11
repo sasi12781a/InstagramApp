@@ -25,7 +25,7 @@ const Stories = () => {
             />
             <Text
               style={{
-                color: 'white',
+                color: 'black',
               }}>
               {story.user.length > 11
                 ? story.user.slice(0, 10).toLowerCase() + '... '
