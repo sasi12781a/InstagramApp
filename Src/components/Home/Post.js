@@ -94,6 +94,7 @@ const PostFooter = ({post}) => (
     <View
       style={{
         flexDirection: 'row',
+        justifyContent: 'space-between',
         width: '32%',
       }}>
       <TouchableOpacity>
