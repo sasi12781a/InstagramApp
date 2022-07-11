@@ -71,7 +71,8 @@ const PostImage = ({post}) => (
   <View
     style={{
       width: '99%',
-      height: 450,
+      height: 300,
+      justifyContent: 'center',
     }}>
     <Image
       source={{
@@ -94,7 +95,6 @@ const PostFooter = ({post}) => (
       style={{
         flexDirection: 'row',
         width: '32%',
-        justifyContent: 'space-between',
       }}>
       <TouchableOpacity>
         <Icon name="heart-outline" size={25} color="#000" />

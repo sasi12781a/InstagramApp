@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     marginHorizontal: 20,
-    marginVertical: 20,
   },
   iconsContainer: {
     flexDirection: 'row',
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 200,
-    height: 150,
+    height: 100,
     resizeMode: 'contain',
   },
   icon: {
