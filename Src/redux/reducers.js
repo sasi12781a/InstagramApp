@@ -1,10 +1,10 @@
 import {
   SET_USER_PASSWORD,
   SET_USER_Email,
-  GET_USER_UID,
   GET_TOKEN,
+  GET_USER_UID,
   REMOVE_TOKEN,
-} from './actions';
+} from './action';
 
 const initialState = {
   email: '',
