@@ -7,6 +7,7 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 function Search() {
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState('');
   return (
     <View style={{flex: 1, alignItems: 'center'}}>
