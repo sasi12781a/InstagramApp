@@ -3,6 +3,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LogInScreen from '../screens/Authentication/login';
 import CreateUserScreen from '../screens/Authentication/createUser';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Home from '../screens/Home';
+import Search from '../screens/Home/Search';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Account from '../screens/Home/Account';
+import Activity from '../screens/Home/Activity';
+import Reels from '../screens/Home/Reels';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,4 +27,65 @@ const Logintocreateuser = () => {
     </NavigationContainer>
   );
 };
-export default Logintocreateuser;
+
+const Tab = createBottomTabNavigator();
+
+const HomeScreen = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return <Icon color="#000" size={20} name="home" />;
+            },
+          }}
+          name="Home"
+          component={Home}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return <Icon color="#000" size={20} name="search" />;
+            },
+          }}
+          name="Search"
+          component={Search}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return <Icon color="#000" size={20} name="play-circle" />;
+            },
+          }}
+          name="Reels"
+          component={Reels}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return <Icon color="#000" size={20} name="heart" />;
+            },
+          }}
+          name="Activity"
+          component={Activity}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return <Icon color="#000" size={20} name="person-circle" />;
+            },
+          }}
+          name="Account"
+          component={Account}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
+export {Logintocreateuser, HomeScreen};
