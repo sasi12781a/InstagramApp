@@ -14,7 +14,7 @@ const Post = ({post}) => {
       <PostImage post={post} />
       <View
         style={{
-          marginHorizontal: 15,
+          marginHorizontal: 10,
           marginTop: 10,
         }}>
         <PostFooter post={post} />
@@ -33,6 +33,7 @@ const PostHeader = ({post}) => (
       flexDirection: 'row',
       justifyContent: 'space-between',
       margin: 5,
+      marginLeft: 5,
       alignItems: 'center',
     }}>
     <View
@@ -128,6 +129,7 @@ const PostLikes = ({post}) => (
     style={{
       flexDirection: 'row',
       marginTop: 4,
+      marginLeft: 15,
     }}>
     <Text
       style={{
@@ -144,6 +146,7 @@ const PostCaption = ({post}) => (
     style={{
       flexDirection: 'row',
       marginTop: 5,
+      marginLeft: 15,
     }}>
     <Text
       style={{
@@ -162,6 +165,7 @@ const PostCommentSection = ({post}) => (
     style={{
       flexDirection: 'row',
       marginTop: 5,
+      marginLeft: 15,
     }}>
     {!!post.comments.length && (
       <Text
@@ -184,6 +188,7 @@ const PostComment = ({post}) => (
         style={{
           flexDirection: 'row',
           marginTop: 5,
+          marginLeft: 15,
         }}>
         <Text
           style={{

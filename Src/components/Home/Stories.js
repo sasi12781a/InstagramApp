@@ -15,6 +15,7 @@ const Stories = () => {
     <View
       style={{
         marginBottom: 13,
+        marginHorizontal: 5,
       }}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {USERS.map((story, index) => (
