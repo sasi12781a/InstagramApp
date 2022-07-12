@@ -8,27 +8,29 @@ const windowHeight = Dimensions.get('window').height;
 
 const SearchScreen = ({navigation}) => {
   return (
-    <View style={{flex: 1, alignItems: 'flex-start', flexDirection: 'row'}}>
-      <Pressable onPress={() => navigation.goBack()}>
-        <Icon
-          name="arrow-back-outline"
-          size={25}
-          color="black"
-          style={{margin: 15}}
-        />
-      </Pressable>
-      <View
-        style={{
-          marginTop: 10,
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          width: windowWidth * 0.8,
-          height: windowHeight * 0.05,
-          borderRadius: 10,
-          alignItems: 'center',
-        }}>
-        <Icon name="search" size={25} color="black" style={{margin: 8}} />
-        <TextInput placeholder="Search" />
+    <View style={{flex: 1}}>
+      <View style={{flex: 1, alignItems: 'flex-start', flexDirection: 'row'}}>
+        <Pressable onPress={() => navigation.goBack()}>
+          <Icon
+            name="arrow-back-outline"
+            size={25}
+            color="black"
+            style={{margin: 15}}
+          />
+        </Pressable>
+        <View
+          style={{
+            marginTop: 10,
+            backgroundColor: 'white',
+            flexDirection: 'row',
+            width: windowWidth * 0.8,
+            height: windowHeight * 0.05,
+            borderRadius: 10,
+            alignItems: 'center',
+          }}>
+          <Icon name="search" size={25} color="black" style={{margin: 8}} />
+          <TextInput placeholder="Search" />
+        </View>
       </View>
     </View>
   );
