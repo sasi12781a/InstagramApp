@@ -21,7 +21,7 @@ function Search() {
           borderRadius: 10,
           alignItems: 'center',
         }}>
-        <Icon name="search" size={25} color="black" style={{margin: 10}} />
+        <Icon name="search" size={25} color="black" style={{margin: 8}} />
         <TextInput placeholder="Search" onChangeText={setUser} />
       </View>
     </View>
