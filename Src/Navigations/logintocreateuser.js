@@ -5,11 +5,11 @@ import LogInScreen from '../screens/Authentication/login';
 import CreateUserScreen from '../screens/Authentication/createUser';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
-import Search from '../screens/Home/Search';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Account from '../screens/Home/Account';
 import Activity from '../screens/Home/Activity';
 import Reels from '../screens/Home/Reels';
+import SearchNavigation from './ScreenNavigation';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,7 +52,7 @@ const HomeScreen = () => {
             },
           }}
           name="Search"
-          component={Search}
+          component={SearchNavigation}
         />
         <Tab.Screen
           options={{
