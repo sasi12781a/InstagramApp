@@ -72,8 +72,15 @@ function LogInScreen({navigation}) {
               alignItems: 'center',
               marginBottom: 20,
             }}>
-            <Text style={{marginTop: 10, fontSize: 30, color: 'white'}}>
-              Login
+            <Text
+              style={{
+                marginTop: 10,
+                fontSize: 30,
+                color: 'white',
+                fontStyle: 'italic',
+                fontFamily: 'ComicSansBold',
+              }}>
+              instagram
             </Text>
           </View>
 
