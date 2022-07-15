@@ -87,7 +87,7 @@ const Reels = () => {
                                 onLoadStart={onLoadStart}
                                 posterResizeMode={'cover'}
                                 onProgress={onProgress}
-                                paused={paused}
+                                paused={false}
                                 key={id}
                                 ref={(ref) => (videoPlayer.current = ref)}
                                 resizeMode={'cover'}
