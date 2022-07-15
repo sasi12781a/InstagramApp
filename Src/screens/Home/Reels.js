@@ -2,7 +2,7 @@
 /* eslint-disable no-shadow */
 /* eslint-disable prettier/prettier */
 import React, {useState, useRef} from 'react';
-import { StyleSheet, View, Platform, Dimensions } from 'react-native';
+import { StyleSheet, View, Platform, Dimensions, ScrollView } from 'react-native';
 import MediaControls, { PLAYER_STATES } from 'react-native-media-controls';
 import Video from 'react-native-video';
 import Orientation from 'react-native-orientation';
@@ -76,42 +76,52 @@ const Reels = () => {
     };
 
     return (
-        <View style={{ marginHorizontal: isFullScreen ? 50 : 0 , flex:1, justifyContent:'center', alignItems:'center'}}>
-            <Video
-                onEnd={onEnd}
-                onLoad={onLoad}
-                onLoadStart={onLoadStart}
-                posterResizeMode={'cover'}
-                onProgress={onProgress}
-                paused={paused}
-                ref={(ref) => (videoPlayer.current = ref)}
-                resizeMode={'cover'}
-                source={{uri:data[0].video}}
-                style={styles.backgroundVideo}
-            />
-            <MediaControls
-                isFullScreen={isFullScreen}
-                duration={duration}
-                isLoading={isLoading}
-                progress={currentTime}
-                onFullScreen={onFullScreen}
-                onPaused={onPaused}
-                onReplay={onReplay}
-                onSeek={onSeek}
-                onSeeking={onSeeking}
-                mainColor={'green'}
-                playerState={playerState}
-                style={isFullScreen ? styles.backgroundVideoFullScreen : styles.backgroundVideo}
-                sliderStyle={isFullScreen ? { containerStyle: styles.mediaControls, thumbStyle: {}, trackStyle: {} } : { containerStyle: {}, thumbStyle: {}, trackStyle: {} }}
-            />
-        </View>
+        <ScrollView style={{flex:1}}>
+            {
+                data.map((data,id)=>{
+                    return(
+                        <View style={{height:screenHeight*0.9,width:screenWidth,}}>
+                            <Video
+                                onEnd={onEnd}
+                                onLoad={onLoad}
+                                onLoadStart={onLoadStart}
+                                posterResizeMode={'cover'}
+                                onProgress={onProgress}
+                                paused={paused}
+                                key={id}
+                                ref={(ref) => (videoPlayer.current = ref)}
+                                resizeMode={'cover'}
+                                source={{uri:data.video}}
+                                style={styles.backgroundVideo}
+                            />
+                            <MediaControls
+                                isFullScreen={isFullScreen}
+                                duration={duration}
+                                isLoading={isLoading}
+                                progress={currentTime}
+                                onFullScreen={onFullScreen}
+                                onPaused={onPaused}
+                                onReplay={onReplay}
+                                onSeek={onSeek}
+                                onSeeking={onSeeking}
+                                mainColor={'green'}
+                                playerState={playerState}
+                                style={isFullScreen ? styles.backgroundVideoFullScreen : styles.backgroundVideo}
+                                sliderStyle={isFullScreen ? { containerStyle: styles.mediaControls, thumbStyle: {}, trackStyle: {} } : { containerStyle: {}, thumbStyle: {}, trackStyle: {} }}
+                            />
+                        </View>
+                    )
+                }
+                )
+            }
+        </ScrollView>
 
     );
 };
 
 const styles = StyleSheet.create({
     backgroundVideo: {
-        height: 250,
+        height: '100%',
         width: '100%',
     },
     mediaControls: {

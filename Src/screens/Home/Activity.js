@@ -59,7 +59,7 @@ const Activity = () => {
           {
             data.map((data,index)=>{
               return(
-                <View style={{marginTop:20,alignItems:'flex-start',justifyContent:'flex-start',flexDirection:'row'}}>
+                <View key={index} style={{marginTop:20,alignItems:'flex-start',justifyContent:'flex-start',flexDirection:'row'}}>
                   <Image style={{borderRadius:100,width: windowWidth * 0.2,height: windowHeight * 0.1,borderWidth: 2,borderColor: '#d35647',margin: 8,}} source={{uri:data.image}}/>
                   <Text style={{fontSize:15,fontWeight:'600',color:'#000',marginTop:30}}>
                     {data.user}
@@ -101,7 +101,7 @@ const Activity = () => {
           {
             data.map((data,index)=>{
               return(
-                <View style={{marginTop:20,alignItems:'flex-start',justifyContent:'flex-start',flexDirection:'row'}}>
+                <View key={index} style={{marginTop:20,alignItems:'flex-start',justifyContent:'flex-start',flexDirection:'row'}}>
                   <Image style={{borderRadius:100,width: windowWidth * 0.2,height: windowHeight * 0.1,borderWidth: 2,borderColor: '#d35647',margin: 8,}} source={{uri:data.image}}/>
                   <Text style={{fontSize:15,fontWeight:'600',color:'#000',marginTop:30}}>
                     {data.user}
