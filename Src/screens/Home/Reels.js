@@ -80,14 +80,14 @@ const Reels = () => {
             {
                 data.map((data,id)=>{
                     return(
-                        <View style={{height:screenHeight*0.9,width:screenWidth,}}>
+                        <View style={{height:screenHeight*0.9,width:screenWidth,alignItems:'center',justifyContent:'center'}}>
                             <Video
                                 onEnd={onEnd}
                                 onLoad={onLoad}
                                 onLoadStart={onLoadStart}
                                 posterResizeMode={'cover'}
                                 onProgress={onProgress}
-                                paused={false}
+                                paused={paused}
                                 key={id}
                                 ref={(ref) => (videoPlayer.current = ref)}
                                 resizeMode={'cover'}
