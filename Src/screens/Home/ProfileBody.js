@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
-import {useNavigation} from '@react-navigation/native';
-import EditNavigation from '../../Navigations/AccountToEdit';
 
 const ProfileBody = ({
   name,
