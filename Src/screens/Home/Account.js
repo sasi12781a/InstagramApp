@@ -68,7 +68,7 @@ const Account = ({post}) => {
             paddingBottom:10,
             letterSpacing: 1,
             fontSize: 14,
-            color:'white'
+            color:'black'
           }}>
           Story Highlights
         </Text>
