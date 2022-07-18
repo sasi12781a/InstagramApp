@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
-import { ProfileBody,ProfileButtons } from './ProfileBody';
+import ProfileBody from './ProfileBody';
+import ProfileButtons from './ProfileButtons';
 import BottomTabView from './BottomTabView';
 import POSTS from '../../data/Post';
 import USERS from '../../data/Users';
