@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import {useNavigation} from '@react-navigation/native';
+import EditNavigation from '../../Navigations/AccountToEdit';
 
 const ProfileBody = ({
   name,
@@ -110,8 +111,7 @@ const ProfileBody = ({
   );
 };
 
-const ProfileButtons = ({id, name, accountName, profileImage}) => {
-  const navigation = useNavigation();
+const ProfileButtons = ({id, name, accountName, profileImage,navigation}) => {
   const [follow, setFollow] = useState(follow);
   return (
     <>
@@ -126,7 +126,7 @@ const ProfileButtons = ({id, name, accountName, profileImage}) => {
           }}>
           <TouchableOpacity
             onPress={() =>
-              navigation.push('EditProfile', {
+              navigation.navigate('EditProfile', {
                 name: name,
                 accountName: accountName,
                 profileImage: profileImage,

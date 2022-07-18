@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import { getUserUid } from "../../redux/actions";
+import { getUserUid } from '../../redux/action';
 import {
   View,
   Text,

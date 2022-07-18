@@ -1,6 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-shadow */
-/* eslint-disable prettier/prettier */
 import React, {useState, useRef} from 'react';
 import { StyleSheet, View, Platform, Dimensions, ScrollView } from 'react-native';
 import MediaControls, { PLAYER_STATES } from 'react-native-media-controls';

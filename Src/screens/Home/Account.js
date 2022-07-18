@@ -89,7 +89,6 @@ const Account = ({post}) => {
                 height: 60,
                 borderRadius: 100,
                 borderWidth: 1,
-                // opacity: 0.5,
                 marginHorizontal: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
