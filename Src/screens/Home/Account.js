@@ -76,7 +76,6 @@ const Account = ({post}) => {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           style={{
-            // paddingVertical: 5,
             paddingBottom:5,
             paddingHorizontal: 10,
           }}>
