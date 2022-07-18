@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 
 const ProfileBody = ({
