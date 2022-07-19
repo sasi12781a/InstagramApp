@@ -27,7 +27,7 @@ const EditProfile = ({route, navigation}) => {
       style={{
         width: '100%',
         height: '100%',
-        backgroundColor: 'black',
+        backgroundColor: '#fffff',
       }}>
       <View
         style={{
@@ -37,9 +37,9 @@ const EditProfile = ({route, navigation}) => {
           padding: 10,
         }}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Ionic name="close-outline" style={{fontSize: 35}} color='white'/>
+          <Ionic name="close-outline" style={{fontSize: 35}} color='black'/>
         </TouchableOpacity>
-        <Text style={{fontSize: 16, fontWeight: 'bold', color:'white'}}>Edit Profile</Text>
+        <Text style={{fontSize: 16, fontWeight: 'bold', color:'black'}}>Edit Profile</Text>
         <TouchableOpacity
           onPress={() => {
             TostMessage();
@@ -51,7 +51,7 @@ const EditProfile = ({route, navigation}) => {
       <View style={{padding: 20, alignItems: 'center'}}>
         <Image
           source={profileImage}
-          style={{width: 80, height: 80, borderRadius: 100, borderColor:'white', borderWidth:1}}
+          style={{width: 80, height: 80, borderRadius: 100, borderColor:'black', borderWidth:1}}
         />
         <Text
           style={{
@@ -65,7 +65,7 @@ const EditProfile = ({route, navigation}) => {
           <Text
             style={{
               opacity: 0.7,
-              color:'white'
+              color:'black'
             }}>
             Name
           </Text>
@@ -76,7 +76,7 @@ const EditProfile = ({route, navigation}) => {
               fontSize: 16,
               borderBottomWidth: 1,
               borderColor: '#CDCDCD',
-              color:'white',
+              color:'black',
             }}
           />
         </View>
@@ -95,26 +95,26 @@ const EditProfile = ({route, navigation}) => {
               fontSize: 16,
               borderBottomWidth: 1,
               borderColor: '#CDCDCD',
-              color:'white',
+              color:'black',
             }}
           />
         </View>
         <View style={{paddingVertical: 10}}>
           <TextInput
             placeholder="Website"
-            placeholderTextColor='white'
+            placeholderTextColor='black'
             style={{
               fontSize: 16,
               borderBottomWidth: 1,
               borderColor: '#CDCDCD',
-              color:'white',
+              color:'black',
             }}
           />
         </View>
         <View style={{paddingVertical: 10}}>
           <TextInput
             placeholder="Bio"
-            placeholderTextColor='white'
+            placeholderTextColor='black'
             style={{
               fontSize: 16,
               borderBottomWidth: 1,
