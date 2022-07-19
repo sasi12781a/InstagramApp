@@ -95,7 +95,7 @@ const HomeScreen=()=>{
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='BottomTab' component={BottomTabs}/>
+        <Stack.Screen name='BottomTabs' component={BottomTabs}/>
         <Stack.Screen name='ProfileButtons' component={ProfileButtons}/>
         <Stack.Screen name='EditProfile' component={EditProfile}/>
       </Stack.Navigator>

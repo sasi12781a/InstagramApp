@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 
-const ProfileButtons = ({id, name, accountName, profileImage,navigation}) => {
+const ProfileButtons = ({id, name, accountName, profileImage,}) => {
+    const navigation=useNavigation();
     const [follow, setFollow] = useState(follow);
     return (
       <>
@@ -17,7 +19,7 @@ const ProfileButtons = ({id, name, accountName, profileImage,navigation}) => {
             }}>
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate('EditProfile', {
+                navigation.push('EditProfile', {
                   name: name,
                   accountName: accountName,
                   profileImage: profileImage,
