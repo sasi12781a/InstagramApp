@@ -95,9 +95,9 @@ const HomeScreen=()=>{
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='BottomTabs' component={BottomTabs}/>
-        <Stack.Screen name='ProfileButtons' component={ProfileButtons}/>
-        <Stack.Screen name='EditProfile' component={EditProfile}/>
+        <Stack.Screen name='BottomTabs' options={{headerShown: false}} component={BottomTabs}/>
+        <Stack.Screen name='ProfileButtons' options={{headerShown: false}} component={ProfileButtons}/>
+        <Stack.Screen name='EditProfile' options={{headerShown: false}} component={EditProfile}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
