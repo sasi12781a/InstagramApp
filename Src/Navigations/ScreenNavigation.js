@@ -19,6 +19,7 @@ const SearchNavigation = () => {
         component={SearchScreen}
       />
       <Stack.Screen
+        options={{headerShown: false}}
         name="FullImage"
         component={FullImage}
       />
