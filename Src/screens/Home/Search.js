@@ -5,6 +5,7 @@ import {
   TextInput,
   Dimensions,
   Pressable,
+  TouchableOpacity,
   Image,
   FlatList,
 } from 'react-native';
@@ -90,16 +91,18 @@ function Search({navigation}) {
             flexWrap: 'wrap',
           }}
           renderItem={({item}) => (
-            <Image
-              source={{uri: item.uri}}
-              style={{
-                width: windowWidth * 0.4,
-                height: windowHeight * 0.2,
-                borderWidth: 2,
-                borderColor: '#d35647',
-                margin: 8,
-              }}
-            />
+            <TouchableOpacity>
+              <Image
+                source={{uri: item.uri}}
+                style={{
+                  width: windowWidth * 0.4,
+                  height: windowHeight * 0.2,
+                  borderWidth: 2,
+                  borderColor: '#d35647',
+                  margin: 8,
+                }}
+              />
+            </TouchableOpacity>
           )}
         />
       </View>
