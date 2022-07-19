@@ -1,13 +1,18 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
+import { useRoute } from "@react-navigation/native";
 
 
-const FullImage = (uri) => (
-  <View style={styles.container}>
-    <ImageBackground source={uri} resizeMode="cover" style={styles.image}>
-    </ImageBackground>
-  </View>
-);
+const FullImage = () => {
+    const route=useRoute();
+    const uri=route.params.uri;
+    return (
+        <View style={styles.container}>
+            <ImageBackground source={{uri:uri}} resizeMode="cover" style={styles.image}>
+            </ImageBackground>
+        </View>
+    );
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
