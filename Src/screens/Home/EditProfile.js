@@ -84,7 +84,7 @@ const EditProfile = ({route, navigation}) => {
           <Text
             style={{
               opacity: 0.7,
-              color:'white',
+              color:'black',
             }}>
             Username
           </Text>
