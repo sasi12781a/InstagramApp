@@ -52,7 +52,7 @@ function CreateUserScreen({navigation}) {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#ffd89b', '#19547b']}
+        colors={['#feda75','#fa7e1e','#d62976', '#962fbf','#4f5bd5']}
         style={styles.linearGradient}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <View

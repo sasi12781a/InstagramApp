@@ -61,7 +61,7 @@ function LogInScreen({navigation}) {
     <Provider store={store}>
       <View style={styles.container}>
         <LinearGradient
-          colors={['#000428', '#004e92']}
+          colors={['#feda75','#fa7e1e','#d62976', '#962fbf','#4f5bd5']}
           style={styles.linearGradient}
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}>
@@ -91,7 +91,6 @@ function LogInScreen({navigation}) {
               alignItems: 'center',
               borderTopRightRadius: 30,
               borderTopLeftRadius: 30,
-              backgroundColor: '#4e4376',
               height: windowHeight,
               width: windowWidth,
             }}>
