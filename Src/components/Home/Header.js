@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Header = () => {
+  const[val,setVal]=useState('11');
   return (
     <View style={styles.container}>
       <TouchableOpacity>
@@ -20,17 +21,9 @@ const Header = () => {
             color="#000"
           />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Icon
-            style={styles.icon}
-            name="heart-outline"
-            size={30}
-            color="#000"
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>setVal('0')}>
           <View style={styles.unreadBadge}>
-            <Text style={styles.unreadBadgetext}>11 </Text>
+            <Text style={styles.unreadBadgetext}>{val}</Text>
           </View>
           <Icon
             style={styles.icon}
