@@ -10,6 +10,8 @@ import Account from '../screens/Home/Account';
 import Activity from '../screens/Home/Activity';
 import Reels from '../screens/Home/Reels';
 import SearchNavigation from './ScreenNavigation';
+import ProfileButtons from '../screens/Home/ProfileButtons';
+import EditProfile from '../screens/Home/EditProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,9 +32,8 @@ const Logintocreateuser = () => {
 
 const Tab = createBottomTabNavigator();
 
-const HomeScreen = () => {
+const BottomTabs= () => {
   return (
-    <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
           options={{
@@ -85,7 +86,20 @@ const HomeScreen = () => {
           component={Account}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
+
+
+
+const HomeScreen=()=>{
+  return(
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='BottomTab' component={BottomTabs}/>
+        <Stack.Screen name='ProfileButtons' component={ProfileButtons}/>
+        <Stack.Screen name='EditProfile' component={EditProfile}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
 export {Logintocreateuser, HomeScreen};

@@ -1,6 +1,14 @@
 import React, {useState} from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
+import { useDispatch } from "react-redux";
+import { getUserUid } from '../../redux/action';
+
+const dispatch = useDispatch()
+function signOut(){
+    dispatch(getUserUid(''));
+}
+
 
 const ProfileBody = ({
   name,
@@ -43,6 +51,15 @@ const ProfileBody = ({
             />
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <TouchableOpacity onPress={signOut}>
+              <Feather
+                  name="log-out"
+                  style={{
+                    fontSize: 25,
+                    color: 'black',
+                    paddingHorizontal: 15,
+              }}/>
+            </TouchableOpacity> 
             <Feather
               name="plus-square"
               style={{

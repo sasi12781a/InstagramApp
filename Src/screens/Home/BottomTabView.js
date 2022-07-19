@@ -72,11 +72,6 @@ const BottomTabView = ({navigation}) => {
     );
   };
   const Tags = () => {
-    const dispatch = useDispatch()
-    function signOut(){
-        dispatch(getUserUid(''));
-    }
-
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -102,20 +97,6 @@ const BottomTabView = ({navigation}) => {
               style={{width: 130, height: 150, marginVertical: 0.5,}}
             />
           ))}
-          <View style={{justifyContent:'center',alignItems:'center',}}>
-            <TouchableOpacity onPress={signOut} style={{color: '#3493D9',borderColor: '#EFEFEF',}}>
-              <Text
-                style={{
-                  marginVertical: 10,
-                  padding: 10,
-                  color: '#3493D9',
-                  borderColor: '#EFEFEF',
-                }}>
-                LogOut
-              </Text>
-            </TouchableOpacity>
-          </View>
-
         </View>
       </ScrollView>
     );
