@@ -50,7 +50,7 @@ const Account = ({post}) => {
         <ProfileBody
           name={POSTS[0].user}
           accountName={POSTS[0].user}
-          profileImage={{uri:POSTS[0].imageUrl}}
+          profileImage={{uri:USERS[0].image}}
           followers="4.6M"
           following="35"
           post="458"
@@ -59,7 +59,7 @@ const Account = ({post}) => {
           id={0}
           name={POSTS[0].user}
           accountName={POSTS[0].user}
-          profileImage={{uri:POSTS[0].imageUrl}}
+          profileImage={{uri:USERS[0].image}}
         />
       </View>
       <View>
