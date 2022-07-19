@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from 'react-native';
 import {Divider} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
 const Post = ({post}) => {
@@ -68,24 +68,28 @@ const PostHeader = ({post}) => (
   </View>
 );
 
-const PostImage = ({post}) => (
-  <View
-    style={{
-      width: '100%',
-      height: 300,
-      justifyContent: 'center',
-    }}>
-    <Image
-      source={{
-        uri: post.imageUrl,
-      }}
+const PostImage = ({post}) => {
+  return(
+    <View
       style={{
-        height: '100%',
-        resizeMode: 'cover',
-      }}
-    />
-  </View>
-);
+        width: '100%',
+        height: 300,
+        justifyContent: 'center',
+      }}>
+      <TouchableOpacity>
+        <Image
+          source={{
+            uri: post.imageUrl,
+          }}
+          style={{
+            height: '100%',
+            resizeMode: 'cover',
+          }}
+        />
+      </TouchableOpacity>
+    </View>
+  )
+};
 
 const PostFooter = ({post}) => (
   <View
