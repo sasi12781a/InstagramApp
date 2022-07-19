@@ -77,7 +77,7 @@ const Reels = () => {
             {
                 data.map((data,id)=>{
                     return(
-                        <View style={{height:screenHeight*0.9,width:screenWidth,alignItems:'center',justifyContent:'center'}}>
+                        <View style={{height:screenHeight*0.8,width:screenWidth,alignItems:'center',justifyContent:'center'}}>
                             <Video
                                 onEnd={onEnd}
                                 onLoad={onLoad}
