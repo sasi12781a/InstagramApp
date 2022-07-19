@@ -4,7 +4,10 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import Ionic from 'react-native-vector-icons/Ionicons';
 import USERS from '../../data/Users';
 import POSTS from '../../data/Post';
+import { useDispatch } from "react-redux";
+import { getUserUid } from '../../redux/action';
 
+const data = [{id:0,video:'https://cdn.videvo.net/videvo_files/video/premium/video0321/large_watermarked/623_623-0235_preview.mp4'},{id:1,video:'https://cdn.videvo.net/videvo_files/video/premium/video0315/large_watermarked/601-2_601-9482_preview.mp4'},{id:2,video:'https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4'},{id:3,video:'https://cdn.videvo.net/videvo_files/video/premium/getty_142/large_watermarked/istock-1078247726_preview.mp4'}];
 const BottomTabView = ({navigation}) => {
   const Tab = createMaterialTopTabNavigator();
   const Posts = () => {
@@ -26,12 +29,14 @@ const BottomTabView = ({navigation}) => {
             justifyContent: 'space-between',
           }}>
           {USERS.map((index, key)=>(
-            <TouchableOpacity>
-              <Image style={{height:150, width:130,marginVertical:0.5}}
-                source={{uri:index.image}}
-                key={key}
-              />
-            </TouchableOpacity>
+            <View style={{justifyContent:'center',alignItems:'center',}}>
+              <TouchableOpacity>
+                <Image style={{height:150, width:130,marginVertical:0.5}}
+                  source={{uri:index.image}}
+                  key={key}
+                />
+              </TouchableOpacity>
+            </View>
             
           ))}
         </View>
@@ -67,6 +72,11 @@ const BottomTabView = ({navigation}) => {
     );
   };
   const Tags = () => {
+    const dispatch = useDispatch()
+    function signOut(){
+        dispatch(getUserUid(''));
+    }
+
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -80,18 +90,32 @@ const BottomTabView = ({navigation}) => {
             height: '100%',
             backgroundColor: 'white',
             flexWrap: 'wrap',
+            justifyContent:'center',
+            alignItems:'center',
             flexDirection: 'row',
             paddingVertical: 5,
             justifyContent: 'space-between',
           }}>
-          {/* {squares} */}
-
           {POSTS.map((index, key)=>(
             <Image source={{uri:index.imageUrl}} 
               key = {key}
               style={{width: 130, height: 150, marginVertical: 0.5,}}
             />
           ))}
+          <View style={{justifyContent:'center',alignItems:'center',}}>
+            <TouchableOpacity onPress={signOut} style={{color: '#3493D9',borderColor: '#EFEFEF',}}>
+              <Text
+                style={{
+                  marginVertical: 10,
+                  padding: 10,
+                  color: '#3493D9',
+                  borderColor: '#EFEFEF',
+                }}>
+                LogOut
+              </Text>
+            </TouchableOpacity>
+          </View>
+
         </View>
       </ScrollView>
     );
