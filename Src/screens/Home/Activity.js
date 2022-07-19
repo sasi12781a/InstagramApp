@@ -72,8 +72,6 @@ const Activity = () => {
               )
 
             })
-              
-
             
           }
         </View>
