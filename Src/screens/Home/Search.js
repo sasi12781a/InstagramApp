@@ -91,7 +91,7 @@ function Search({navigation}) {
             flexWrap: 'wrap',
           }}
           renderItem={({item}) => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('FullImage',{uri:item.uri})}>
               <Image
                 source={{uri: item.uri}}
                 style={{

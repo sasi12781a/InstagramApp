@@ -9,7 +9,6 @@ const screenHeight = Dimensions.get('screen').height;
 const screenWidth = Dimensions.get('screen').width;
 
 const Reels = () => {
-
     const data = [{id:0,video:'https://cdn.videvo.net/videvo_files/video/premium/video0321/large_watermarked/623_623-0235_preview.mp4'},{id:1,video:'https://cdn.videvo.net/videvo_files/video/premium/video0315/large_watermarked/601-2_601-9482_preview.mp4'},{id:2,video:'https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4'},{id:3,video:'https://cdn.videvo.net/videvo_files/video/premium/getty_142/large_watermarked/istock-1078247726_preview.mp4'}];
     const videoPlayer = useRef(null);
     const [duration, setDuration] = useState(0);
