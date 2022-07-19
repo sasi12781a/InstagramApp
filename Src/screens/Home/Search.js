@@ -91,7 +91,7 @@ function Search({navigation}) {
             flexWrap: 'wrap',
           }}
           renderItem={({item}) => (
-            <TouchableOpacity onPress={()=>navigation.navigate('FullImage',{uri:item.uri})}>
+            <TouchableOpacity onPress={()=>navigation.navigate('FullImage',{uri:'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'})}>
               <Image
                 source={{uri: item.uri}}
                 style={{
