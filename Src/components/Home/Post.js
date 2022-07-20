@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from 'react-native';
 import {Divider} from 'react-native-elements';
