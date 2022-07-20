@@ -76,8 +76,9 @@ const Reels = () => {
             {
                 data.map((data,id)=>{
                     return(
-                        <View style={{height:screenHeight*0.9,width:screenWidth,alignItems:'center',justifyContent:'center'}}>
+                        <View style={{display:'flex',height:screenHeight*0.9,width:screenWidth,alignItems:'center',justifyContent:'center'}}>
                             <Video
+                                resizeMode='cover'
                                 onEnd={onEnd}
                                 onLoad={onLoad}
                                 onLoadStart={onLoadStart}
@@ -86,7 +87,6 @@ const Reels = () => {
                                 paused={paused}
                                 key={id}
                                 ref={(ref) => (videoPlayer.current = ref)}
-                                resizeMode={'cover'}
                                 source={{uri:data.video}}
                                 style={styles.backgroundVideo}
                             />
