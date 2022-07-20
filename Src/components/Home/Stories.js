@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   View,
@@ -10,7 +9,7 @@ import {
 } from 'react-native';
 import USERS from '../../data/Users';
 
-const Stories = () => {
+const Stories = ({navigation}) => {
   return (
     <View
       style={{
@@ -18,6 +17,19 @@ const Stories = () => {
         marginHorizontal: 5,
       }}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <View style={{justifyContent:'center',alignItems:'center'}}>
+          <TouchableOpacity>
+            <Image
+              source={{
+                uri: 'https://www.citypng.com/public/uploads/preview/-11591396102oojxpyygnw.png'
+              }}
+              style={{width: 70,height: 70,marginLeft: 6,borderWidth: 3,borderColor: '#ff8501',borderRadius: 70,}}
+            />
+          </TouchableOpacity>
+          <Text>
+            Your story
+          </Text>
+        </View>
         {USERS.map((story, index) => (
           <View
             key={index}
