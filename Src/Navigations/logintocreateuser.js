@@ -12,6 +12,7 @@ import Reels from '../screens/Home/Reels';
 import SearchNavigation from './ScreenNavigation';
 import ProfileButtons from '../screens/Home/ProfileButtons';
 import EditProfile from '../screens/Home/EditProfile';
+import Status from '../components/Status';
 
 const Stack = createNativeStackNavigator();
 
@@ -97,6 +98,7 @@ const HomeScreen=()=>{
       <Stack.Navigator>
         <Stack.Screen name='BottomTabs' options={{headerShown: false}} component={BottomTabs}/>
         <Stack.Screen name='ProfileButtons' options={{headerShown: false}} component={ProfileButtons}/>
+        <Stack.Screen name='Status' component={Status}/>
         <Stack.Screen name='EditProfile' options={{headerShown: false}} component={EditProfile}/>
       </Stack.Navigator>
     </NavigationContainer>

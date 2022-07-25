@@ -8,8 +8,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import USERS from '../../data/Users';
+import { useNavigation } from '@react-navigation/native';
 
-const Stories = ({navigation}) => {
+
+const Stories = () => {
+  const navigation=useNavigation();
   return (
     <View
       style={{
@@ -37,7 +40,7 @@ const Stories = ({navigation}) => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.push('Status',{uri:story.image})} >
               <Image
                 source={{
                   uri: story.image,
