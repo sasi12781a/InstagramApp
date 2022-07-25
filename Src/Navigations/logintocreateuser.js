@@ -13,6 +13,7 @@ import SearchNavigation from './ScreenNavigation';
 import ProfileButtons from '../screens/Home/ProfileButtons';
 import EditProfile from '../screens/Home/EditProfile';
 import Status from '../components/Status';
+import AddStory from '../screens/Home/AddToStory'; 
 
 const Stack = createNativeStackNavigator();
 
@@ -100,6 +101,7 @@ const HomeScreen=()=>{
         <Stack.Screen name='ProfileButtons' options={{headerShown: false}} component={ProfileButtons}/>
         <Stack.Screen name='Status' component={Status}/>
         <Stack.Screen name='EditProfile' options={{headerShown: false}} component={EditProfile}/>
+        <Stack.Screen name='AddStory' component={AddStory}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

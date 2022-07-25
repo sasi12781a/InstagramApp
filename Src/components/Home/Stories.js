@@ -21,7 +21,7 @@ const Stories = () => {
       }}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{justifyContent:'center',alignItems:'center'}}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.push('AddStory')}>
             <Image
               source={{
                 uri: 'https://www.citypng.com/public/uploads/preview/-11591396102oojxpyygnw.png'
