@@ -4,7 +4,6 @@ import {Text, View} from 'react-native'
 const UserPosts = () =>{
     return(
         <View>
-            Hi
         </View>
     )
 }
