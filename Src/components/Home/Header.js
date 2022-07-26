@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import DropdownComponent from '../../screens/Home/Dropdown';
 
 const Header = () => {
   const[val,setVal]=useState('11');
@@ -13,7 +14,7 @@ const Header = () => {
         />
       </TouchableOpacity>
       <View style={styles.iconsContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={DropdownComponent}>
           <Icon
             style={styles.icon}
             name="add-circle-outline"
