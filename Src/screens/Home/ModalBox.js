@@ -12,18 +12,16 @@ export default function App() {
             console.warn("closed");
             }}
             >
-            <View style={styles.container}>
-                <View style={styles.View}>
-                <Text style={styles.text}>GeeksforGeeks</Text>
-                <Button title="close"
-                        onPress={()=>{setactive(!active)}}/>
+                <View style={styles.container}>
+                    <View style={styles.View}>
+                        <Text style={styles.text}>GeeksforGeeks</Text>
+                        <Button title="close" onPress={()=>{setactive(!active)}}/>
+                    </View>
                 </View>
-            </View>
             </Modal>
-            <Button
-            title={"click"}
-            onPress={()=>{setactive(!active)}}
-            />
+            <View style={{alignItems:'flex-start',justifyContent:'flex-start'}}>
+               <Button title={"click"} onPress={()=>{setactive(!active)}}/>
+            </View>
         </View>
     );
 }
