@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from 'react-native';
 import {Divider} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -90,43 +90,50 @@ const PostImage = ({post}) => {
   )
 };
 
-const PostFooter = ({post}) => (
-  <View
-    style={{
-      flexDirection: 'row',
-    }}>
+const PostFooter = ({post}) =>{ 
+  const [estado, setEstado] = useState(false);
+
+  const agregarFavoritos = () => {
+    setEstado(!estado);
+  };
+  return(
     <View
       style={{
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '32%',
       }}>
-      <TouchableOpacity>
-        <Icon name="heart-outline" size={25} color="#000" />
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon name="chatbubble-outline" size={25} color="#000" />
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon
-          style={styles.shareicon}
-          name="send-outline"
-          size={25}
-          color="#000"
-        />
-      </TouchableOpacity>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          width: '32%',
+        }}>
+        <TouchableOpacity onPress={() => agregarFavoritos()}>
+          <Icon name={estado ? 'heart-half-outline' : "heart-outline"} size={25} color={estado ? 'red':'#000'} />
+        </TouchableOpacity>
+        <TouchableOpacity >
+          <Icon name="chatbubble-outline" size={25} color="#000" />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon
+            style={styles.shareicon}
+            name="send-outline"
+            size={25}
+            color="#000"
+          />
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'flex-end',
+        }}>
+        <TouchableOpacity>
+          <Icon name="bookmark-outline" size={25} color="#000" />
+        </TouchableOpacity>
+      </View>
     </View>
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'flex-end',
-      }}>
-      <TouchableOpacity>
-        <Icon name="bookmark-outline" size={25} color="#000" />
-      </TouchableOpacity>
-    </View>
-  </View>
-);
+  )
+};
 const PostLikes = ({post}) => (
   <View
     style={{
