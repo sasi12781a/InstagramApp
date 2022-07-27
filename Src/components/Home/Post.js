@@ -92,10 +92,15 @@ const PostImage = ({post}) => {
 
 const PostFooter = ({post}) =>{ 
   const [estado, setEstado] = useState(false);
+  const [e,setE] = useState(false);
 
   const agregarFavoritos = () => {
     setEstado(!estado);
   };
+
+  const agregar=()=>{
+    setE(!e);
+  }
   return(
     <View
       style={{
@@ -108,7 +113,7 @@ const PostFooter = ({post}) =>{
           width: '32%',
         }}>
         <TouchableOpacity onPress={() => agregarFavoritos()}>
-          <Icon name={estado ? 'heart-half-outline' : "heart-outline"} size={25} color={estado ? 'red':'#000'} />
+          <Icon name={estado ? 'heart' : "heart-outline"} size={25} color={estado ? 'red':'#000'} />
         </TouchableOpacity>
         <TouchableOpacity >
           <Icon name="chatbubble-outline" size={25} color="#000" />
@@ -127,8 +132,8 @@ const PostFooter = ({post}) =>{
           flex: 1,
           alignItems: 'flex-end',
         }}>
-        <TouchableOpacity>
-          <Icon name="bookmark-outline" size={25} color="#000" />
+        <TouchableOpacity onPress={() => agregar()}>
+          <Icon name= {e ? "bookmark-outline" : "bookmark"} size={25} color="#000" />
         </TouchableOpacity>
       </View>
     </View>
