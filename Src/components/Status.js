@@ -7,10 +7,10 @@ const Status = () => {
     const route=useRoute();
     const uri=route.params.uri;
     return (
-        <View style={styles.container}>
-            <ImageBackground source={{uri:uri}} resizeMode="cover" style={styles.image}>
-            </ImageBackground>
-        </View>
+      <View style={styles.container}>
+        <ImageBackground source={{uri:uri}} resizeMode="cover" style={styles.image}>
+        </ImageBackground>
+      </View>
     );
 }
 const styles = StyleSheet.create({
