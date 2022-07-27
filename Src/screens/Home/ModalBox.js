@@ -20,22 +20,30 @@ export default function ModalBox() {
                 >
                 <TouchableOpacity onPress={() => setactive(!active)}>
                     <View style={styles.View}>
-                        <View style={{flexDirection:'row'}}>
-                        <Text style={styles.text}>Post</Text>
-                        <Icon style={styles.icon} name="reader-outline" size={30} color="#000"/>
-                        </View>
-                        <View style={{flexDirection:'row'}}>
-                        <Text style={styles.text}>Story</Text>
-                        <Icon style={styles.icon} name="add-circle-outline" size={30} color="#000"/>
-                        </View>
-                        <View style={{flexDirection:'row'}}>
-                        <Text style={styles.text}>Reel</Text>
-                        <Icon style={styles.icon} name="videocam-outline" size={30} color="#000"/>
-                        </View>
-                        <View style={{flexDirection:'row'}}>
-                        <Text style={styles.text}>Live</Text>
-                        <Icon style={styles.icon} name="wifi-outline" size={30} color="#000"/>
-                        </View>
+                        <TouchableOpacity>
+                            <View style={{flexDirection:'row'}}>
+                                <Text style={styles.text}>Post</Text>
+                                <Icon style={styles.icon} name="reader-outline" size={30} color="#000"/>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={{flexDirection:'row'}}>
+                                <Text style={styles.text}>Story</Text>
+                                <Icon style={styles.icon} name="add-circle-outline" size={30} color="#000"/>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={{flexDirection:'row'}}>
+                                <Text style={styles.text}>Reel</Text>
+                                <Icon style={styles.icon} name="videocam-outline" size={30} color="#000"/>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={{flexDirection:'row'}}>
+                                <Text style={styles.text}>Live</Text>
+                                <Icon style={styles.icon} name="wifi-outline" size={30} color="#000"/>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </TouchableOpacity>
             
