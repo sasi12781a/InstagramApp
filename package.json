@@ -20,7 +20,6 @@
     "ignore-warnings": "^0.2.1",
     "react": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-element-dropdown": "^2.0.0",
     "react-native-elements": "^4.0.0-rc.2",
     "react-native-linear-gradient": "^2.6.2",
     "react-native-media-controls": "^2.3.0",
