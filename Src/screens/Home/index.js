@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
+    zIndex:0,
   },
 });
 export default Home;

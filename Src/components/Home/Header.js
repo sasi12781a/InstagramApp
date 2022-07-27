@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import ModalBox from '../../screens/Home/ModalBox';
 
 const Header = () => {
   const[val,setVal]=useState('11');
@@ -13,14 +14,7 @@ const Header = () => {
         />
       </TouchableOpacity>
       <View style={styles.iconsContainer}>
-        <TouchableOpacity >
-          <Icon
-            style={styles.icon}
-            name="add-circle-outline"
-            size={30}
-            color="#000"
-          />
-        </TouchableOpacity>
+        <ModalBox/>
         <TouchableOpacity onPress={()=>setVal('0')}>
           <View style={styles.unreadBadge}>
             <Text style={styles.unreadBadgetext}>{val}</Text>
@@ -42,6 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     marginHorizontal: 20,
+    zIndex:1,
   },
   iconsContainer: {
     flexDirection: 'row',

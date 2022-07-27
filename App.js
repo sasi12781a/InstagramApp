@@ -11,7 +11,7 @@ const AppWrapper = () => {
   const storeData = useSelector(state => state);
   const uid = storeData.userReducer.uid;
   if (uid) {
-    return <HomeScreen />;
+    return <HomeScreen/>;
   }
   return <Logintocreateuser />;
 };
