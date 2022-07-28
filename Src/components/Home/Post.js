@@ -133,7 +133,7 @@ const PostFooter = ({post}) =>{
           alignItems: 'flex-end',
         }}>
         <TouchableOpacity onPress={() => agregar()}>
-          <Icon name= {e ? "bookmark-outline" : "bookmark"} size={25} color="#000" />
+          <Icon name= {e ? "bookmark" : "bookmark-outline"} size={25} color="#000" />
         </TouchableOpacity>
       </View>
     </View>
