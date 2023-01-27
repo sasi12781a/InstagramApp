@@ -1,33 +1,35 @@
 {
   "project_info": {
-    "project_number": "54360548885",
-    "project_id": "insta-af874",
-    "storage_bucket": "insta-af874.appspot.com"
+    "project_number": "870191725021",
+    "project_id": "instagramapp-aaf48",
+    "storage_bucket": "instagramapp-aaf48.appspot.com"
+    
   },
+  
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54360548885:android:6d897ba23d11dcb6d7101c",
+        "mobilesdk_app_id": "1:870191725021:android:37ea13086c34c513b5de34",
         "android_client_info": {
           "package_name": "com.instagramapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "54360548885-96o8qntdj18qkb3rm18089qgahimgj6r.apps.googleusercontent.com",
+          "client_id": "870191725021-j0p9pt9mp2reiqljf13t50a05khrefs3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCi8iDIDq2Kkjfw4SqKFb04Wff1MHhzqUk"
+          "current_key": "AIzaSyCpiPHykj0rJAdQ3vaudgYKV0ktRTprwLA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "54360548885-96o8qntdj18qkb3rm18089qgahimgj6r.apps.googleusercontent.com",
+              "client_id": "870191725021-j0p9pt9mp2reiqljf13t50a05khrefs3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
